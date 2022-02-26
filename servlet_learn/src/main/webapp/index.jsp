@@ -14,7 +14,7 @@
 
 <h2><a href="responseDemo01">/responseDemo01</a></h2>
 <h2><a href="regist.html">验证码页面</a></h2>
-<h2><a href="download.html">下载页面</a></h2>
+<h2><a href="download.html">下载的页面</a></h2>
 <h2></h2>
 </body>
 </html>
