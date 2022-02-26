@@ -14,7 +14,7 @@ public class ResponseServletDemo05 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String info = "javaWeb的开发1";
+        String info = "javaWeb的开发2";
 
         response.setContentType("text/plain;charset=utf-8");
 
