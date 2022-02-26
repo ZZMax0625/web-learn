@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="java_web_learn" />
         <module name="quickstart" />
+        <module name="servlet_learn" />
         <module name="book-online" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
       <module name="book-online" target="1.8" />
       <module name="java_web_learn" target="1.8" />
       <module name="quickstart" target="1.8" />
+      <module name="servlet_learn" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

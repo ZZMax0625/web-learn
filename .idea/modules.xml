@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/book-online/book-online.iml" filepath="$PROJECT_DIR$/book-online/book-online.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_web_learn.iml" filepath="$PROJECT_DIR$/java_web_learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/quickstart/quickstart.iml" filepath="$PROJECT_DIR$/quickstart/quickstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet_learn/servlet_learn.iml" filepath="$PROJECT_DIR$/servlet_learn/servlet_learn.iml" />
     </modules>
   </component>
 </project>

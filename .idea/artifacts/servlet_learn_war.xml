@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="servlet_learn:war">
+    <output-path>$PROJECT_DIR$/servlet_learn/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>servlet_learn</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="servlet_learn-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="servlet_learn:war exploded" />
+    </root>
+  </artifact>
+</component>
