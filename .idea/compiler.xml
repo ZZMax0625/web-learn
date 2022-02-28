@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,11 +10,15 @@
         <module name="java_web_learn" />
         <module name="quickstart" />
         <module name="servlet_learn" />
+        <module name="cookie_session_learn" />
+        <module name="comprehensive-exercise" />
         <module name="book-online" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="book-online" target="1.8" />
+      <module name="comprehensive-exercise" target="1.8" />
+      <module name="cookie_session_learn" target="1.8" />
       <module name="java_web_learn" target="1.8" />
       <module name="quickstart" target="1.8" />
       <module name="servlet_learn" target="1.8" />
