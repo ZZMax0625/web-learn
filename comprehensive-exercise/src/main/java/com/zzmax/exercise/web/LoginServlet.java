@@ -27,8 +27,6 @@ public class LoginServlet extends HttpServlet {
         // 是否勾选了记住我
         String remember = request.getParameter("remember");
 
-
-
         // 2.调用servive
         User user = userService.login(username, password);
 

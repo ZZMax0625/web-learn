@@ -17,8 +17,6 @@ public class ServletA extends HttpServlet {
         cookie.setMaxAge(60 * 60 * 24 * 7);
         // 3.通过response发送cookie
         response.addCookie(cookie);
-
-
     }
 
     @Override

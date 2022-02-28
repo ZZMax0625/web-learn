@@ -22,11 +22,7 @@ public class ServletB extends HttpServlet {
             String name = cookie.getName();
             if ("username".equals(name)){
                 String value = cookie.getValue();
-                // logback还没弄好，课后再弄
-                System.out.println("name00:" + value);
-                log.info("name01:");
                 log.error("name02:" + value);
-
                 break;
             }
         }

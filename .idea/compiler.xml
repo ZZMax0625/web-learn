@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="java_web_learn" />
         <module name="quickstart" />
-        <module name="servlet_learn" />
         <module name="cookie_session_learn" />
         <module name="comprehensive-exercise" />
         <module name="book-online" />

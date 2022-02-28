@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/cookie_session_learn/cookie_session_learn.iml" filepath="$PROJECT_DIR$/cookie_session_learn/cookie_session_learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_web_learn.iml" filepath="$PROJECT_DIR$/java_web_learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/quickstart/quickstart.iml" filepath="$PROJECT_DIR$/quickstart/quickstart.iml" />
-      <module fileurl="file://$PROJECT_DIR$/servlet_learn/servlet_learn.iml" filepath="$PROJECT_DIR$/servlet_learn/servlet_learn.iml" />
     </modules>
   </component>
 </project>
