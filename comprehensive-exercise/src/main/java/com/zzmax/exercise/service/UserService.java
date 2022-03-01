@@ -24,4 +24,20 @@ public class UserService {
         sqlSession.close();
         return user;
     }
+
+    public boolean register(User user) {
+        //1. 获取SqlSession
+        SqlSession sqlSession = factory.openSession();
+        //2. 获取UserMapper
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        //3. 判断用户名是否存在
+        User u = mapper.selectByUsername(user.getUsername());
+        if (u == null) {
+            // 用户名不存在，注册
+            mapper.add(user);
+            sqlSession.commit();
+        }
+        sqlSession.close();
+        return u == null;
+    }
 }

@@ -3,10 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <!--开启驼峰映射-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
     <!--起别名-->
     <typeAliases>
         <package name="com.zzmax.exercise.enerty"/>
     </typeAliases>
+
 
     <environments default="development">
         <environment id="development">

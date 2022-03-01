@@ -36,8 +36,6 @@ public class LoginServlet extends HttpServlet {
 
             //是否勾选了记住我
             if("on".equals(remember)){
-                System.out.println("需要记录cookie");
-
                 // 1.创建Cookie对象
                 Cookie cUserName = new Cookie("username", username);
                 Cookie cPassword = new Cookie("password", username);
@@ -54,6 +52,7 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("user",user);
             String contextPath = request.getContextPath();
+
             response.sendRedirect(contextPath + "/index");
 
         }
