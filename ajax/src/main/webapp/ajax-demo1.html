@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax请求实例</title>
+</head>
+<body>
+<h2>下方是服务器端返回的数据</h2>
+<hr>
+<h2 id="info"></h2>
+<button id="btn"></button>
+<script>
+    let int = window.setTimeout("loadText()",2000);
+    let btn = document.getElementById("btn");
+    btn.onclick = loadText;
+
+    function loadText()
+    {
+        var info = document.getElementById("info");
+        // 1.创建核心对象
+        let xHttp;
+        if (window.XMLHttpRequest){
+            xHttp = new XMLHttpRequest();
+        }
+        else {
+            // 处理ie6
+            xHttp = ActiveXObject("Microsoft.XMLHTTP");
+        }
+        // 2.发送请求
+        xHttp.open("GET","http://localhost:8080/ajaxServlet")
+        xHttp.send();
+        // 3.获取响应
+        xHttp.onreadystatechange = function (){
+            if (this.readyState === 4 && this.status === 200){
+                // 回调函数
+                alert(this.responseText);
+                info.innerHTML = this.responseText;
+            }
+        }
+    }
+</script>
+</body>
+</html>

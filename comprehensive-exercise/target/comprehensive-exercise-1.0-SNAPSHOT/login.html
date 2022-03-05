@@ -25,6 +25,7 @@
                             <div class="ui left icon input">
                                 <i class="user icon"></i>
                                 <input type="text" name="username" placeholder="用户名" id="username">
+                                <h3 id="info"></h3>
                             </div>
                         </div>
                         <div class="field">
@@ -74,11 +75,15 @@
         }
     });
 
+
     //用cookie中的值 填充账号密码
     let username = document.getElementById('username');
     let password = document.getElementById('password');
     username.value = getCookie('username')
     password.value = getCookie('password')
+
+
+
 
     // 封装获取指定名的cookie的值
     function getCookie(cname) {

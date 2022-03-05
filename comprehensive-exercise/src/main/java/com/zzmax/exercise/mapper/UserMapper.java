@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 
 public interface UserMapper {
 
-    @Select("SELECT * FROM tb_user WHERE username = #{username} AND password = #{password}; ")
+    @Select("SELECT * FROM tb_user WHERE username = #{username} AND password = #{password};")
     User findUser(@Param("username") String username, @Param("password") String password);
 
     @Select("SELECT * FROM tb_user WHERE username = #{username} ")

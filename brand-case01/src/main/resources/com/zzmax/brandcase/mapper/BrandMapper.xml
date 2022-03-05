@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Configuration 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.zzmax.brandcase.mapper.BrandMapper">
+
+    <delete id="deleteByIds">
+        delete from tb_brand where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectByPageAndCondition" resultType="com.zzmax.brandcase.pojo.Brand">
+        select * from tb_brand
+        <where>
+            <if test="brand.brandName != null and brand.brandName != '' ">
+                and brand_name like #{brand.brandName}
+            </if>
+            <if test="brand.companyName != null and brand.CompanyName != '' ">
+                and company_name like #{brand.companyName}
+            </if>
+            <if test="brand.status != null">
+                and status = #{brand.status}
+            </if>
+        </where>
+        limit #{begin} ,#{size}
+    </select>
+    <select id="selectTotalCountByCondition" resultType="java.lang.Integer">
+        select count(*)
+        from tb_brand
+        <where>
+            <if test="brandName != null and brandName != '' ">
+            and brand_name like #{brandName}
+        </if>
+        <if test="companyName != null and companyName != '' ">
+            and company_ name like #{companyName}
+        </if>
+        <if test="status != null">
+            and status = #{status}
+        </if>
+    </where>
+ </select>
+</mapper>

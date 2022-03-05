@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax+axios</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <a href="addBrand.html">新增品牌</a>
+    <hr>
+    <table id="brandTable">
+
+    </table>
+</div>
+<script>
+    window.onload = function (){
+        axios({
+            method:"get",
+            url:"http://localhost:8080/comprehensive_exercise_war_exploded/SelectAllServlet"
+        }).then(function (resp) {
+            let brands = resp.data;
+            let tableData = "<tr>\n    <th>序号</th>\n    <th>品牌名称</th>\n    <th>企业名称</th>\n    <th>排序</th>\n    <th>品牌介绍</th>\n    <th>状态</th>\n    <th>操作</th>\n</tr>";
+
+            for (let i = 0;i <brands.length;i++){
+                let brand = brands[i];
+                // language=HTML
+                tableData += `<tr>\n    <td>${3+3}</td>\n    <td>${brand.brandName}</td>\n    <td>${brand.companyName}</td>\n    <td>${brand.ordered}</td>\n    <td>${brand.description}</td>\n    <td>${brand.status}</td>\n    <td>\n        <a href=\"#\">修改</a>\n        <a href=\"#\">删除</a>\n    <td>\n</tr>`;
+                document.getElementById("brandTable").innerHTML = tableData;
+            }
+        });
+    }
+</script>
+</body>
+</html>

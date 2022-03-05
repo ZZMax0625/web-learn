@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>前后端分离POST请求传————文件上传并显示</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <h2>前后端分离POST请求传————文件上传并显示</h2>
+        <div class="parent">
+            <div class="child">
+                <label for="account">
+                    账号：
+                    <input type="text" name="account" placeholder="请输入账号" id="account">
+                </label>
+                <label for="file">
+                    <input type="file" name="file" id="file"  >
+                </label>
+                <label for="btn">
+                    <input type="button" value="注册" id="btn" style = "padding-left:20px ">
+                </label>
+            </div>
+        </div>
+
+    <img src="" alt="上传图片显示" style="display: none;" id="preview" width="150">
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+        const btn = document.getElementById("btn");
+        const file = document.getElementById("file");
+        btn.onclick = function (){
+            const account = document.getElementById("account").value;
+            let formData = new FormData();
+            formData.append("account",account)
+            formData.append("file",file.files[0])
+            axios({
+                url:"/upload2",
+                method:"post",
+                headers:{"Content-type":"multipart/form-data"},
+                data:formData
+            }).then((res)=>{
+                let previewImg = document.getElementById("preview")
+
+                previewImg.src = `${res.data}`;
+                previewImg.style.display="block"
+            })
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

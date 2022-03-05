@@ -26,6 +26,7 @@
                                 <i class="user icon"></i>
                                 <input type="text" name="username" placeholder="用户名" id="username">
                             </div>
+                            <h3 id="info"></h3>
                         </div>
                         <div class="field">
                             <div class="ui left icon input">
@@ -78,6 +79,44 @@
             }
         }
     });
+
+    let username = document.getElementById('username');
+
+    username.onblur = checkUsername;
+
+    function checkUsername(){
+        let username = document.getElementById('username');
+        const name = username.value;
+        let xHttp;
+        if (window.XMLHttpRequest){
+            xHttp = new XMLHttpRequest();
+        }
+        else {
+            // 处理ie6
+            xHttp = ActiveXObject("Microsoft.XMLHTTP");
+        }
+        // 2.发送请求
+        xHttp.open("GET","http://localhost:8080/comprehensive_exercise_war_exploded/check?username=" + name);
+        xHttp.send();
+
+        // 3.获取响应
+        xHttp.onreadystatechange = function (){
+
+            if (this.readyState === 4 && this.status === 200){
+                // 回调函数
+                let info = document.getElementById("info");
+                alert(typeof this.responseText)
+                if (this.responseText == "true"){
+                    alert(this.responseText)
+                    info.innerHTML = "√";
+                }else{
+                    alert(this.responseText)
+                    info.innerHTML = "×";
+                }
+
+            }
+        }
+    }
 
     document.getElementById("changeImg").onclick = function () {
         document.getElementById("verifyCodeImg").src = "verifyCode?" + new Date().getMilliseconds();
