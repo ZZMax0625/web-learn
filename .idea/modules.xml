@@ -11,7 +11,6 @@
       <module fileurl="file://$PROJECT_DIR$/filter-listener-learn/filter-listener-learn.iml" filepath="$PROJECT_DIR$/filter-listener-learn/filter-listener-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_web_learn.iml" filepath="$PROJECT_DIR$/java_web_learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/quickstart/quickstart.iml" filepath="$PROJECT_DIR$/quickstart/quickstart.iml" />
-      <module fileurl="file://$PROJECT_DIR$/brand-case/src/test/test1.iml" filepath="$PROJECT_DIR$/brand-case/src/test/test1.iml" />
     </modules>
   </component>
 </project>
